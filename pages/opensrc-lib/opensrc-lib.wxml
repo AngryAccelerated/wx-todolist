@@ -1,0 +1,13 @@
+<!--pages/opensrc-lib/opensrc-lib.wxml-->
+
+<view style="margin: 16px"></view>
+<i-card full="true" title="iView WeApp" thumb="http://inmap.talkingdata.com/wx/e5da9fdc97a0b3fb16c115d379820583.jpg">
+    <view slot="content">微信小程序控件库</view>
+    <view slot="footer">github.com/TalkingData/iview-weapp</view>
+</i-card>
+<view style="margin: 16px"></view>
+<i-card full="true" title="wx-calendar" >
+    <view slot="content">小程序日历库</view>
+    <view slot="footer">github.com/treadpit/wx_calendar</view>
+</i-card>
+<view style="margin: 16px"></view>

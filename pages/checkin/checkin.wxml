@@ -1,0 +1,11 @@
+<!--pages/checkin/checkin.wxml-->
+<block>
+  <calendar calendarConfig="{{calendarConfig}}" bind:afterTapDay="refreshCheckData" bind:afterCalendarRender="afterCalendarRender2" id="calendar2"></calendar>
+  <view class="divisionBar"></view>
+  <i-cell-group wx:for="{{checkData}}" wx:key="item">
+    <checkcomponent name="{{item.name}}" checkId="{{item.id}}" currentDate="{{currentDate}}"
+    bind:checkDataChanged="handleDataChanged">
+    </checkcomponent>
+  </i-cell-group>
+  <addbutton bindclick="handleAddition" />
+</block>

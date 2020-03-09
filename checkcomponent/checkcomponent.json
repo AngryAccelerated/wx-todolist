@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-cell": "../../dist/cell/index",
+    "i-icon": "../../dist/icon/index"
+    }
+}

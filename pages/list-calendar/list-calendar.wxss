@@ -1,0 +1,4 @@
+/* pages/list-calendar/list-calendar.wxss */
+.calendarView{
+  display: block
+}

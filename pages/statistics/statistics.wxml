@@ -1,0 +1,10 @@
+<!--pages/statistics/statistics.wxml-->
+<i-cell title="完成率"></i-cell>
+<view class="chart-container">
+  <f2 class="f2-chart" onInit="{{onPieChart}}" />
+</view>
+<i-cell title="七日完成情况"></i-cell>
+<view class="chart-container">
+  <f2 class="f2-chart" onInit="{{onLineChart}}" />
+</view>
+<i-cell title=" "></i-cell>

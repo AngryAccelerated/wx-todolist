@@ -1,0 +1,7 @@
+<addbutton bindclick="handleAddition" />
+
+<i-cell-group wx:for="{{listData}}" wx:key="item">
+
+  <taskcomponent caption="{{item.caption}}" content="{{item.content}}" isCheck="{{item.status}}" createDate="{{item.time}}" taskId="{{item.listID}}" bind:listDataChanged="onShow">
+  </taskcomponent>
+</i-cell-group>

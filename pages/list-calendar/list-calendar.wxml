@@ -1,0 +1,15 @@
+<!--pages/list-calendar/list-calendar.wxml-->
+<view class="calendarView">
+
+  <calendar calendarConfig="{{calendarConfig}}" bind:afterTapDay="handleTapDay" bind:afterCalendarRender="afterCalendarRender" id="calendar1"></calendar>
+
+  <view class="divisionBar" bindtouchstart="barTouchStart" bindtouchend="barTouchEnd"></view>
+
+  <i-cell-group wx:for="{{listData}}" wx:key="item">
+
+    <taskcomponent caption="{{item.caption}}" content="{{item.content}}" isCheck="{{item.status}}" createDate="{{item.time}}" taskId="{{item.listID}}" bind:listDataChanged="onDataChanged">
+    </taskcomponent>
+
+  </i-cell-group>
+  <addbutton bindclick="handleAddAction" />
+</view>

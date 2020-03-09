@@ -1,0 +1,11 @@
+<!--pages/statistics-check/statistics-check.wxml-->
+
+<i-panel title="一周打卡率">
+  <view class="chart-container">
+    <f2 class="f2-chart" onInit="{{onCheckChart}}" />
+  </view>
+</i-panel>
+<i-panel title="打卡记录">
+  <calendar style="width:95%" calendarConfig="{{calendarConfig}}" bind:afterTapDay="handleTapDay" bind:afterCalendarRender="afterCalendarRender" id="calendar3"></calendar>
+</i-panel>
+<i-cell title=" "></i-cell>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "addbutton": "../../AddButton/addbutton",
+    "calendar": "../../calendar/index",
+    "checkcomponent": "../../checkcomponent/checkcomponent"
+    }
+}

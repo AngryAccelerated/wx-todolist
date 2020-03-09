@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/developers/developers",
+    "pages/settings/settings",
+    "pages/opensrc-lib/opensrc-lib",
+    "pages/checkin/checkin",
+    "pages/statistics/statistics",
+    "pages/list-calendar/list-calendar",
+    "pages/singletask/singletask",
+    "pages/statistics-check/statistics-check",
+    "pages/addcheck/addcheck",
+    "pages/checkinpage/checkinpage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#303F9F",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#303F9F",
+    "borderStyle": "white",
+    "backgroundColor": "#f0f0f0",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/time_fill.png",
+        "selectedIconPath": "images/time_fill_selected.png"
+      },
+      {
+        "pagePath": "pages/list-calendar/list-calendar",
+        "iconPath": "images/activity_fill.png",
+        "selectedIconPath": "images/activity_fill_selected.png"
+      },
+      {
+        "pagePath": "pages/statistics/statistics",
+        "iconPath": "images/statistics_fill.png",
+        "selectedIconPath": "images/statistics_fill_selected.png"
+      },
+      {
+        "pagePath": "pages/checkin/checkin",
+        "iconPath": "images/check_fill.png",
+        "selectedIconPath": "images/check_fill_selected.png"
+      },
+      {
+        "pagePath": "pages/settings/settings",
+        "iconPath": "images/setup_fill.png",
+        "selectedIconPath": "images/setup_fill_selected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,17 @@
+<!--pages/checkinpage/checkinpage.wxml-->
+<i-panel title="打卡内容" hide-border="true">
+  <i-row>
+    <i-col span="3">
+      <i-radio checked="{{checkStatus}}" bindchange="statusTap">
+      </i-radio>
+    </i-col>
+    <i-col span="18">
+      <i-input value="{{name}}" type="textarea" placeholder="标题" bindblur ="onCaptionChanged"/>
+    </i-col>
+    <i-col span="3">
+        <view class="i-swipeout-image" style="background:#ffffff;" bindtap="gotoCheckStatistics">
+          <i-icon size="34" color="#2d8cf0" type="dynamic" />
+        </view>
+    </i-col>
+  </i-row>
+</i-panel>

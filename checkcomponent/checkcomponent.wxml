@@ -1,0 +1,14 @@
+<!--checkcomponent/checkcomponent.wxml-->
+<movable-area>
+  <movable-view direction="horizontal" inertia="true" bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" x="{{offsetX}}">
+    <i-cell title="{{name}}" style="width:100%" label="坚持了 {{days}} 天" bindclick="onClicked">
+      <i-icon slot="icon" size="34" color="#19be6b" type="right" wx:if="{{isCheck}}">
+      </i-icon>
+      <i-icon slot="icon" size="34" color="#2d8cf0" type="label" wx:else="{{!isCheck}}">
+      </i-icon>
+    </i-cell>
+  <view class="del-button" bindtap="handleSlideDelete">
+      <i-icon type="trash_fill" size="34" color="#ffffff" />
+  </view>
+  </movable-view>
+</movable-area>

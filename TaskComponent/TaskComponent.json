@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-cell": "../../dist/cell/index",
+    "i-radio": "../../dist/radio/index",
+    "i-icon": "../../dist/icon/index"
+    }
+}

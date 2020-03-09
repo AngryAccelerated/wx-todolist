@@ -1,0 +1,5 @@
+<!--pages/developers/developers.wxml-->
+<view style="margin: 16px"></view>
+<i-card title="ACRL" extra="19121458" full="true">
+    <view slot="content">项目开发者</view>
+</i-card>

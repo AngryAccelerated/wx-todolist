@@ -1,0 +1,8 @@
+<!--pages/settings/settings.wxml-->
+
+<i-panel class="cell-panel-demo" title="其他">
+  <i-cell-group>
+    <i-cell title="开发者" is-link url="/pages/developers/developers"></i-cell>
+    <i-cell title="开源库" is-link url="/pages/opensrc-lib/opensrc-lib"></i-cell>
+  </i-cell-group>
+</i-panel>

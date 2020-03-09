@@ -1,0 +1,16 @@
+<!--TaskComponent/TaskComponent.wxml-->
+<movable-area>
+  <movable-view direction="horizontal" inertia="true"
+  bindtouchstart="handleTouchStart"
+          bindtouchend="handleTouchEnd"
+          bindchange="handleMovableChange"
+          x="{{offsetX}}">
+  <i-cell title="{{caption}}" style="width:100%" label="{{content}}" bindclick="onClicked" >
+    <i-radio slot="icon" value="" checked="{{isCheck}}" bindchange="statusTap">
+    </i-radio>
+  </i-cell>
+  <view class="del-button" bindtap="handleSlideDelete">
+      <i-icon type="trash_fill" size="34" color="#ffffff" />
+  </view>
+  </movable-view>
+</movable-area>
