@@ -22,7 +22,7 @@
 		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.10.1",
+	"libVersion": "2.10.2",
 	"appid": "wx5cb6e5e06997e816",
 	"projectname": "todo-list",
 	"debugOptions": {

@@ -14,7 +14,8 @@ Page({
     content: null,
     checkStatus: false,
     createDate: null,
-    action: 1
+    action: 1,
+    send: false
   },
 
   /**
@@ -79,7 +80,16 @@ Page({
   onReady: function() {
 
   },
-
+  sendTask: function()
+  {
+    console.log("send = true");
+    this.setData({
+      send: true
+    })
+    wx.navigateBack({
+      
+    });
+  },
   /**
    * 生命周期函数--监听页面显示
    */
@@ -115,7 +125,8 @@ Page({
       }
     } else //create new task
     {
-      if(this.data.caption.length != 0)
+      console.log("send is: " + this.data.caption.length);
+      if (this.data.caption.length != 0 && this.data.send == true)
       {
         var id = Date.parse(new Date());
         console.log("add start-------");
@@ -141,7 +152,7 @@ Page({
       }
       else
       {
-        console.log("empty caption will not save");
+        console.log("task will not save");
       }
     }
     app.syncAllData();
@@ -155,6 +166,7 @@ Page({
     this.setData({
       caption: e.detail.detail.value
     });
+    console.log("caption: " + e.detail.detail.value)
   },
   /**
    * 页面相关事件处理函数--监听用户下拉动作

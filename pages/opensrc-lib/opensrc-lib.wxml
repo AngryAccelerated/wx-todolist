@@ -11,3 +11,7 @@
     <view slot="footer">github.com/treadpit/wx_calendar</view>
 </i-card>
 <view style="margin: 16px"></view>
+<i-card full="true" title="wx-calendar" >
+    <view slot="content">wx-charts 微信小程序图表库</view>
+    <view slot="footer">github.com/xiaolin3303/wx-charts</view>
+</i-card>

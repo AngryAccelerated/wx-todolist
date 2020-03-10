@@ -2,12 +2,17 @@
 <i-panel title="打卡内容">
   <i-row>
     <i-col span="3">
-    <view class="iconview">
-     <i-icon slot="icon" size="34" color="#2d8cf0" type="label_fill"/>
-    </view>
+      <view class="iconview">
+        <i-icon slot="icon" size="34" color="#2d8cf0" type="label_fill" />
+      </view>
     </i-col>
     <i-col span="18">
-      <i-input value="{{caption}}" type="textarea" placeholder="打卡" bindblur ="onCaptionChanged"/>
+      <i-input value="{{caption}}" type="textarea" placeholder="打卡" bindchange="onCaptionChanged" />
+    </i-col>
+    <i-col span="3">
+      <view class="iconview">
+        <i-icon size="34" color="#2d8cf0" type="send" bindtap="sendCheck" />
+      </view>
     </i-col>
   </i-row>
 </i-panel>

@@ -6,15 +6,15 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    var postsData = require('data.js');
-    this.globalData.taskList = postsData.taskList;
-    var checkData = require('checkdata.js');
-    this.globalData.checkList = checkData.checkList;
+    //var postsData = require('data.js');
+    //this.globalData.taskList = postsData.taskList;
+    //var checkData = require('checkdata.js');
+    //this.globalData.checkList = checkData.checkList;
 
-    //var taskData = wx.getStorageSync('tasks')
-    //var checkData = wx.getStorageSync('checks')
-    //this.globalData.taskList = taskData
-    //this.globalData.checkList = checkData
+    var taskData = wx.getStorageSync('tasks')
+    var checkData = wx.getStorageSync('checks')
+    this.globalData.checkList = checkData.checkList;
+    this.globalData.taskList = taskData.taskList
     
 
     // 登录
@@ -52,8 +52,20 @@ App({
   globalData: {
     userInfo: null,
     currentID: null,
-    taskList: null,
-    checkList: null,
+    taskList: {
+      "list": [{
+        "time": "2020-01-01",
+        "content": "试着开始添加你的第一个待办事项吧",
+        "caption": "Task1",
+        "status": false,
+        "listID": 123456
+      }]},
+    checkList: {
+      "list": [{
+        "name": "试着添加你的第一项打卡吧",
+        "id": 10001,
+        "time": []
+      }]},
     currentCheck: null
   }
 })

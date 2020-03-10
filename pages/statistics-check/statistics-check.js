@@ -1,5 +1,7 @@
 // pages/statistics-check/statistics-check.js
 const app = getApp()
+var wxCharts = require('../../utils/wxcharts.js');
+var pieChart = null;
 Page({
 
   /**
@@ -12,84 +14,6 @@ Page({
       theme: 'elegant',
       inverse: false,
       week: true
-    },
-    onCheckChart(F2, config) {
-      var temp = app.globalData.checkList.list;
-      let num = 0;
-      var id = app.globalData.currentCheck;
-      var today = new Date();
-      for (var val in temp){
-        if(temp[val]["id"] == id)
-        {
-          for (var i = 6; i >= 0; i--) {
-            var newDate = new Date(today.getTime() - i * 24 * 60 * 60 * 1000);
-            var month = newDate.getMonth() + 1;
-            var day = newDate.getDate();
-            if (month < 10)
-              month = '0' + month;
-            if (day < 10)
-              day = '0' + day;
-            var time = newDate.getFullYear() + '-' + month + '-' + day
-            for (var val2 in temp[val]["time"]) 
-              if (temp[val]["time"][val2] == time)
-                num++;
-          }
-          break;
-        }
-      }
-
-      const map = {
-        完成: (num / 7 * 100).toFixed(2) + '%',
-        未完成: ((7 - num) / 7 * 100).toFixed(2) + '%'
-      };
-      const data = [{
-        name: '完成',
-        percent: num / 7,
-        a: '1'
-      }, {
-        name: '未完成',
-        percent: (7 - num) / 7,
-        a: '1'
-      }];
-      const chart = new F2.Chart(config);
-      chart.source(data, {
-        percent: {
-          formatter: function formatter(val) {
-            return val * 100 + '%';
-          }
-        }
-      });
-      chart.legend({
-        position: 'right',
-        itemFormatter: function itemFormatter(val) {
-          return val + '  ' + map[val];
-        }
-      });
-      chart.tooltip(false);
-      chart.coord('polar', {
-        transposed: true,
-        radius: 0.85
-      });
-      chart.axis(false);
-      chart.interval()
-        .position('a*percent')
-        .color('name', ['#1890FF', '#13C2C2', '#2FC25B', '#FACC14', '#F04864', '#8543E0'])
-        .adjust('stack')
-        .style({
-          lineWidth: 1,
-          stroke: '#fff',
-          lineJoin: 'round',
-          lineCap: 'round'
-        })
-        .animate({
-          appear: {
-            duration: 600,
-            easing: 'cubicOut'
-          }
-        });
-
-      chart.render();
-      return chart;
     }
   },
   /**
@@ -103,6 +27,52 @@ Page({
       id: options.id
     })
     console.log("option.id:" + this.data.id);
+
+    var windowWidth = 320;
+    try {
+      var res = wx.getSystemInfoSync();
+      windowWidth = res.windowWidth;
+    } catch (e) {
+      console.error('getSystemInfoSync failed!');
+    }
+
+    var temp = app.globalData.checkList.list;
+    let num = 0;
+    var id = app.globalData.currentCheck;
+    var today = new Date();
+    for (var val in temp) {
+      if (temp[val]["id"] == id) {
+        for (var i = 6; i >= 0; i--) {
+          var newDate = new Date(today.getTime() - i * 24 * 60 * 60 * 1000);
+          var month = newDate.getMonth() + 1;
+          var day = newDate.getDate();
+          if (month < 10)
+            month = '0' + month;
+          if (day < 10)
+            day = '0' + day;
+          var time = newDate.getFullYear() + '-' + month + '-' + day
+          for (var val2 in temp[val]["time"])
+            if (temp[val]["time"][val2] == time)
+              num++;
+        }
+        break;
+      }
+    }
+
+    pieChart = new wxCharts({
+      canvasId: 'pieCanvas',
+      type: 'pie',
+      series: [{
+        name: '完成',
+        data: num,
+      }, {
+        name: '未完成',
+        data: 7 - num,
+      }],
+      width: windowWidth,
+      height: 275,
+      dataLabel: true
+    });
   },
 
   /**

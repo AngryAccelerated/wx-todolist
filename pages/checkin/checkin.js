@@ -28,15 +28,11 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  },
+  onReady: function () { },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-    
-  },
   afterCalendarRender2: function (e) {
     this.calendar.jump("#calendar2");
     this.calendar.switchView('week', "#calendar2").then(() => { });
@@ -55,7 +51,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
   transformDateToString: function (obj) {
     var year = obj.year;
@@ -67,16 +63,14 @@ Page({
       day = "0" + day;
     var date = year + "-" + month + "-" + day;
     return date;
-  }
-  ,
+  },
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
 
   },
-  handleDataChanged: function()
-  {
+  handleDataChanged: function () {
     console.log("compulsively refresh data.");
     this.setData({
       checkData: app.globalData.checkList.list
@@ -95,6 +89,32 @@ Page({
 
   },
   onShow: function () {
+    let temp = undefined;
+    try {
+      temp = app.globalData.checkList.list
+    } catch (error) {
+      console.warn("check list is empty");
+    }
+    if (temp == undefined)
+      app.globalData.checkList = {
+        list: [{
+          "name": "试着添加你的第一项打卡项目吧",
+          "id": 10001,
+          "time": []
+        }, {
+          "name": "切换上方日期可以跳转到指定日期补卡",
+          "id": 10001,
+          "time": []
+        }, {
+          "name": "点击打卡进入详细页面",
+          "id": 10001,
+          "time": []
+        }, {
+          "name": "打卡详细页面除了打卡与重命名，还会统计你的打卡数据",
+          "id": 10001,
+          "time": []
+        }]
+      }
     this.setData({
       checkData: app.globalData.checkList.list
     });

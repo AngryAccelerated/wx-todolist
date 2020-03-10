@@ -7,6 +7,7 @@ Page({
    */
   data: {
     caption: "",
+    send: false
   },
 
   /**
@@ -31,7 +32,15 @@ Page({
   onShow: function () {
 
   },
-
+  sendCheck: function()
+  {
+    this.setData({
+      send: true
+    })
+    wx.navigateBack({
+      
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -42,7 +51,8 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    if(this.data.caption != "")
+
+    if(this.data.caption != "" && this.data.send)
     {
       console.log("save a new checkin item"); 
       var id = Date.parse(new Date());

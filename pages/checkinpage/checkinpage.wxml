@@ -2,7 +2,7 @@
 <i-panel title="打卡内容" hide-border="true">
   <i-row>
     <i-col span="3">
-      <i-radio checked="{{checkStatus}}" bindchange="statusTap">
+      <i-radio checked="{{checkStatus}}" bindchange="statusTap" >
       </i-radio>
     </i-col>
     <i-col span="18">

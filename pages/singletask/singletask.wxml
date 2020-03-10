@@ -6,8 +6,8 @@
       <i-radio checked="{{checkStatus}}" bindchange="statusTap">
       </i-radio>
     </i-col>
-    <i-col span="18">
-      <i-input value="{{caption}}" type="textarea" placeholder="标题" bindblur ="onCaptionChanged"/>
+    <i-col span="{{action==2?15:18}}">
+      <i-input value="{{caption}}" type="textarea" placeholder="标题" bindchange ="onCaptionChanged"/>
     </i-col>
     <i-col span="3">
       <picker mode="date" value="{{createDate}}" bindchange="dateChange">
@@ -16,6 +16,12 @@
         </view>
       </picker>
     </i-col>
+
+    <i-col span="3" hidden="{{action==2?false:true}}">
+        <view hidden="{{action==2?false:true}}" class="i-swipeout-image" style="background:#ffffff;" >
+          <i-icon hidden="{{action==2?false:true}}" size="34" color="#2d8cf0" type="send" bindtap="sendTask"/>
+        </view>
+    </i-col>
   </i-row>
-  <i-input value="{{content}}" type="textarea" placeholder="内容" bindblur="onContentChanged"/>
+  <i-input value="{{content}}" type="textarea" placeholder="内容" bindchange="onContentChanged"/>
 </i-panel>

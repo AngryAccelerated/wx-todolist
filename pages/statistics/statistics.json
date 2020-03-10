@@ -1,8 +1,6 @@
 {
   "usingComponents": {
     "calendar": "../../calendar/index",
-    "f2": "@antv/wx-f2",
-    "i-cell": "../../dist/cell/index",
-    "i-divider": "../../dist/divider/index"
+    "i-cell": "../../dist/cell/index"
     }
 }

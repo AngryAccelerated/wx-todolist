@@ -2,7 +2,6 @@
   "usingComponents": {
     "calendar": "../../calendar/index",
     "i-panel": "../../dist/panel/index",
-    "f2": "@antv/wx-f2",
     "i-cell": "../../dist/cell/index"
     }
 }

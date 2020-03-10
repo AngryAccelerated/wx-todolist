@@ -102,7 +102,7 @@ Component({
       endX = e.changedTouches[0].pageX;
       if ((endX - startX) < -30) {
         this.setData({
-          offsetX: -180
+          offsetX: -500
         })
       } else {
 

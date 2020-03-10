@@ -2,7 +2,7 @@
 
 <i-panel title="一周打卡率">
   <view class="chart-container">
-    <f2 class="f2-chart" onInit="{{onCheckChart}}" />
+  <canvas class="f2-chart" canvas-id="pieCanvas"></canvas>
   </view>
 </i-panel>
 <i-panel title="打卡记录">
