@@ -3,7 +3,7 @@
   <i-row>
     <i-col span="3">
       <view class="iconview">
-        <i-icon slot="icon" size="34" color="#2d8cf0" type="label_fill" />
+        <i-icon slot="icon" size="32" color="#2d8cf0" type="label_fill" />
       </view>
     </i-col>
     <i-col span="18">
@@ -11,7 +11,7 @@
     </i-col>
     <i-col span="3">
       <view class="iconview">
-        <i-icon size="34" color="#2d8cf0" type="send" bindtap="sendCheck" />
+        <i-icon size="32" color="#2d8cf0" type="send" bindtap="sendCheck" />
       </view>
     </i-col>
   </i-row>

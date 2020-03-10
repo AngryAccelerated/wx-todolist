@@ -2,7 +2,7 @@
 
 <view style="margin: 16px"></view>
 <i-card full="true" title="iView WeApp" thumb="http://inmap.talkingdata.com/wx/e5da9fdc97a0b3fb16c115d379820583.jpg">
-    <view slot="content">微信小程序控件库</view>
+    <view slot="content">iViewApp微信小程序控件库</view>
     <view slot="footer">github.com/TalkingData/iview-weapp</view>
 </i-card>
 <view style="margin: 16px"></view>
@@ -11,7 +11,7 @@
     <view slot="footer">github.com/treadpit/wx_calendar</view>
 </i-card>
 <view style="margin: 16px"></view>
-<i-card full="true" title="wx-calendar" >
+<i-card full="true" title="wx-charts" >
     <view slot="content">wx-charts 微信小程序图表库</view>
     <view slot="footer">github.com/xiaolin3303/wx-charts</view>
 </i-card>

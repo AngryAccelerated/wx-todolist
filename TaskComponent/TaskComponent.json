@@ -3,6 +3,7 @@
   "usingComponents": {
     "i-cell": "../../dist/cell/index",
     "i-radio": "../../dist/radio/index",
-    "i-icon": "../../dist/icon/index"
+    "i-icon": "../../dist/icon/index",
+    "i-checkbox": "../../dist/checkbox/index"
     }
 }

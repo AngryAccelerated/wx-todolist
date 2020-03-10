@@ -48,13 +48,8 @@ Page({
     let allTasks = 0;
     for (var val in temp) {
       allTasks++;
-      for (var i = 6; i >= 0; i--) {
-        var newDate = new Date(today.getTime() - i * 24 * 60 * 60 * 1000);
-        var time = this.transfomDateToString(newDate);
-        if (temp[val]["time"] == time && temp[val]["status"]) {
+      if (temp[val]["status"]) {
           complete++;
-          break;
-        }
       }
     }
     for (var i = 6; i >= 0; i--) {

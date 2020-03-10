@@ -1,5 +1,5 @@
 <!--pages/statistics/statistics.wxml-->
-<i-cell title="完成率"></i-cell>
+<i-cell title="总完成率"></i-cell>
 <view class="chart-container">
   <canvas class="f2-chart" canvas-id="pieCanvas"></canvas>
 </view>

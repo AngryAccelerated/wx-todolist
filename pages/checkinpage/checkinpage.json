@@ -5,6 +5,7 @@
     "i-row": "../../dist/row/index",
     "i-col": "../../dist/col/index",
     "i-radio": "../../dist/radio/index",
-    "i-icon": "../../dist/icon/index"
+    "i-icon": "../../dist/icon/index",
+    "i-checkbox": "../../dist/checkbox/index"
     }
 }
